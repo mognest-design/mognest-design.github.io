@@ -29,8 +29,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
-  padding: 0 16px 0 20px;
+  height: clamp(40px, 5vw, 70px);
+  padding: 0 clamp(10px, 2vw, 20px);
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -59,11 +59,24 @@ body {
   &__logo {
     display: flex;
     align-items: center;
+    transition: transform 0.1s ease;
 
     img,
     svg {
       height: auto;
-      width: 120px;
+      width: clamp(80px, 8vw, 120px);
+    }
+
+    svg path {
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      transform: translate(1px, 1px);
+
+      svg path {
+        fill: var(--color-gray03);
+      }
     }
   }
 
@@ -85,6 +98,7 @@ body {
   }
 
   &__nav-link {
+    display: inline-block;
     font-family: var(--font-tag);
     font-size: 15px;
     font-weight: 400;
@@ -92,6 +106,12 @@ body {
     letter-spacing: 0.1em;
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease, transform 0.1s ease;
+
+    &:hover {
+      color: var(--color-gray03);
+      transform: translate(1px, 1px);
+    }
   }
 
   &__hamburger {
@@ -127,6 +147,10 @@ body {
   .header__hamburger {
     display: flex;
   }
+  .header__hamburger {
+    width: 22px;
+    height: 16px;
+  }
 }
 
 /* ==========================================================================
@@ -134,7 +158,8 @@ body {
    ========================================================================== */
 .hero {
   position: relative;
-  height: 100vh;
+  width: 100%;
+  height: 60vh;
   margin-top: 0;
   overflow: hidden;
 
@@ -170,25 +195,26 @@ body {
   &__content {
     position: absolute;
     left: 0;
-    bottom: 150px;
+    bottom: 60px;
     z-index: 10;
   }
 
   &__copy-line {
     display: inline-block;
     font-family: var(--font-mincho);
-    font-size: 40px;
+    font-size: clamp(20px, 6vw, 32px);
     font-weight: 450;
     line-height: 1.9;
     color: var(--color-black);
     background: rgba(255, 255, 255, 0.85);
     padding: 0 10px;
-    margin-left: 60px;
+    margin-left: clamp(4px, 1.5vw, 24px);
     white-space: nowrap;
 
     &--indent {
       display: block;
-      margin-left: 250px;
+      width: fit-content;
+      margin-left: clamp(16px, 5vw, 80px);
     }
   }
 }
@@ -212,6 +238,44 @@ body {
   100% { opacity: 0; }
 }
 
+@media (max-width: 767px) {
+  .hero {
+    &__content {
+      bottom: 40px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    &__copy-line {
+      margin-left: 0;
+
+      &--indent {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero__copy-line {
+    font-size: clamp(28px, 2.8vw, 40px);
+    margin-left: clamp(40px, 6vw, 60px);
+
+    &.hero__copy-line--indent {
+      margin-left: clamp(150px, 20vw, 250px);
+    }
+  }
+
+  .hero__content {
+    bottom: 150px;
+  }
+}
+
 /* ==========================================================================
    Intro(一言紹介文)
    ========================================================================== */
@@ -221,7 +285,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 20px;
+  padding: 24px 70px;
   background-color: rgba(255, 255, 255, 0.95);
   box-sizing: border-box;
 
@@ -229,10 +293,22 @@ body {
     font-family: "Shippori Mincho", serif;
     font-size: 16px;
     font-weight: 600;
-    line-height: 1.7;
+    line-height: 2;
     letter-spacing: 0;
     color: var(--color-black);
     text-align: center;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro {
+    padding: 24px 10px;
+  }
+
+  .intro__text {
+    font-size: 14px;
   }
 }
 
@@ -1291,11 +1367,24 @@ body {
     display: inline-block;
     width: 120px;
     margin-bottom: 20px;
+    transition: transform 0.1s ease;
 
     svg {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    svg path {
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      transform: translate(1px, 1px);
+
+      svg path {
+        fill: var(--color-gray03);
+      }
     }
   }
 
@@ -1306,13 +1395,16 @@ body {
   }
 
   &__link {
+    display: inline-block;
     font-family: var(--font-mincho);
     font-size: 12px;
     color: var(--color-black);
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.1s ease;
 
     &:hover {
-      text-decoration: underline;
+      color: var(--color-gray03);
+      transform: translate(1px, 1px);
     }
   }
 }
