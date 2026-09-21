@@ -839,6 +839,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    gap: 0;
     padding: 70px 10px 60px;
 
     &__sidebar {
@@ -847,7 +848,7 @@ body {
 
     &__back {
       order: 1;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     &__back-icon {
@@ -864,6 +865,7 @@ body {
       height: auto;
       aspect-ratio: 1 / 1;
       padding: 30px;
+      margin-bottom: 20px;
     }
 
     &__gallery-main {
@@ -871,7 +873,11 @@ body {
       max-height: 100%;
     }
 
-    &__title,
+    &__title {
+      order: 3;
+      font-size: 21px;
+    }
+
     &__tags,
     &__meta-row {
       order: 3;
