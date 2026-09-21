@@ -111,12 +111,23 @@ body {
   border: none;
   cursor: pointer;
   padding: 0;
+  z-index: 1100;
+}
+.header__hamburger.is-active .header__hamburger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.header__hamburger.is-active .header__hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.header__hamburger.is-active .header__hamburger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 .header__hamburger-line {
   display: block;
   width: 100%;
   height: 2px;
   background: var(--color-black);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 @keyframes headerFade {
@@ -128,12 +139,37 @@ body {
   .header__nav {
     display: none;
   }
-  .header__hamburger {
+  .header__nav.is-open {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-white);
+    z-index: 1050;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .header__nav-item {
+    border-left: none;
+    padding: 0;
+  }
+  .header__nav-item:last-child {
+    border-right: none;
   }
   .header__hamburger {
+    display: flex;
     width: 22px;
     height: 16px;
+  }
+  .header__logo img,
+  .header__logo svg {
+    width: 96px;
   }
 }
 /* ==========================================================================
@@ -162,8 +198,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero__bg-img--1 {
   animation: heroFade1 8s infinite ease-in-out;
@@ -191,7 +226,6 @@ body {
 }
 .hero__copy-line--indent {
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   margin-left: clamp(16px, 5vw, 80px);
 }
@@ -283,7 +317,8 @@ body {
     padding: 24px 10px;
   }
   .intro__text {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.9;
   }
 }
 /* ==========================================================================
@@ -391,6 +426,7 @@ body {
 .works__more-icon {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: var(--color-gray);
   display: flex;
@@ -445,8 +481,7 @@ body {
 .works__img {
   width: 50%;
   height: 50%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
   transition: opacity 0.3s ease;
 }
@@ -478,13 +513,18 @@ body {
   }
   .works__heading {
     font-size: 35px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
   .works__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   .works__item--wide {
-    grid-column: span 1;
+    grid-column: span 2;
+  }
+  .works__label {
+    font-size: 12px;
   }
   .works__thumb {
     height: auto;
@@ -606,8 +646,7 @@ body {
   max-height: 60%;
   width: auto;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .work-detail__nav-arrow {
   width: 40px;
@@ -747,8 +786,7 @@ body {
 .works-catalog__img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .works-catalog__tags {
@@ -944,21 +982,22 @@ body {
   .about {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 60px;
   }
   .about__heading {
     font-size: 35px;
   }
   .about__name {
-    font-size: 22px;
+    font-size: 18px;
+    letter-spacing: 0.15em;
   }
   .about__lead {
-    font-size: 13px;
+    font-size: 11px;
   }
   .about__text {
     font-size: 12px;
   }
 }
-
 /* ==========================================================================
    Contact
    +========================================================================== */
@@ -1059,6 +1098,7 @@ body {
 .contact__submit-icon {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: var(--color-gray);
   display: flex;
@@ -1097,9 +1137,6 @@ body {
 .contact--closed .contact__textarea {
   cursor: not-allowed;
 }
-.contact--closed .contact__input::-moz-placeholder, .contact--closed .contact__textarea::-moz-placeholder {
-  color: var(--color-gray02);
-}
 .contact--closed .contact__input::placeholder,
 .contact--closed .contact__textarea::placeholder {
   color: var(--color-gray02);
@@ -1120,8 +1157,10 @@ body {
   .contact__heading {
     font-size: 35px;
   }
+  .contact__lead {
+    font-size: 13px;
+  }
 }
-
 /* ==========================================================================
    404
    ========================================================================== */
@@ -1311,6 +1350,7 @@ body {
   color: var(--color-gray03);
   transform: translate(1px, 1px);
 }
+
 @media (max-width: 767px) {
   .footer {
     padding-left: 10px;
