@@ -150,7 +150,7 @@ body {
     z-index: 1050;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10vh;
+    padding-bottom: 20vh;
     box-sizing: border-box;
   }
   .header__nav-list {
@@ -163,6 +163,22 @@ body {
   }
   .header__nav-item:last-child {
     border-right: none;
+  }
+  .header__nav-link {
+    position: relative;
+  }
+  .header__nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+  .header__nav-link:hover::after {
+    width: 100%;
   }
   .header__hamburger {
     display: flex;
@@ -606,7 +622,7 @@ body {
 .work-detail__back-icon svg {
   display: block;
 }
-.work-detail__back:hover .work-detail__back-icon {
+.work-detail__back:hover .work-detail__back-icon, .work-detail__back:active .work-detail__back-icon {
   background-color: var(--color-gray02);
   color: var(--color-white);
 }
@@ -690,7 +706,7 @@ body {
   opacity: 0.4;
   pointer-events: none;
 }
-.work-detail__nav-arrow:hover {
+.work-detail__nav-arrow:hover, .work-detail__nav-arrow:active {
   background-color: var(--color-gray02);
   color: var(--color-white);
 }
@@ -822,6 +838,12 @@ body {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 767px) {
+  .work-detail__gallery-main {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
 /* ==========================================================================
    Works Catalog(一覧ページ)
    ========================================================================== */
@@ -876,6 +898,11 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.works-catalog__item:hover .works-catalog__img {
+  transform: scale(1.05);
+  filter: brightness(0.85);
 }
 .works-catalog__tags {
   font-family: var(--font-mincho);
@@ -1411,10 +1438,27 @@ body {
 
 @media (max-width: 1023px) {
   .legal {
-    padding: 110px 24px 80px;
+    padding: 110px 10px 80px;
   }
   .legal__title {
-    font-size: 24px;
+    font-size: 23px;
+    margin-bottom: 36px;
+  }
+  .legal__intro {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+  .legal__heading {
+    font-size: 15px;
+  }
+  .legal__text {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .legal__list {
+    font-size: 13px;
+    line-height: 1.7;
   }
 }
 /* ==========================================================================
@@ -1468,5 +1512,8 @@ body {
   .footer {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .footer__logo {
+    width: 96px;
   }
 }
