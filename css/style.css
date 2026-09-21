@@ -653,7 +653,8 @@ body {
 }
 .work-detail__gallery {
   flex: 1;
-  height: 700px;
+  aspect-ratio: 1/1;
+  height: auto;
   background-color: var(--color-gray04);
   display: flex;
   align-items: center;
@@ -661,8 +662,8 @@ body {
   box-sizing: border-box;
 }
 .work-detail__gallery-main {
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 70%;
+  max-height: 70%;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -770,8 +771,8 @@ body {
     margin-bottom: 20px;
   }
   .work-detail__gallery-main {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 70%;
+    max-height: 70%;
   }
   .work-detail__title {
     order: 3;
