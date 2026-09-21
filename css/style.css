@@ -509,6 +509,7 @@ body {
 }
 @media (max-width: 767px) {
   .works {
+    padding-top: 45px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -544,8 +545,18 @@ body {
     width: 80%;
     height: 80%;
   }
+  .works__item-group {
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .works__item-group .works__item {
+    flex: 1;
+  }
   .works__more {
-    margin-top: 20px;
+    margin-top: 0;
+    gap: 8px;
   }
   .works__more-text {
     font-size: 13px;
@@ -988,6 +999,10 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .about__service-group {
+    margin-bottom: 12px;
   }
   .about__heading {
     font-size: 35px;
@@ -1169,6 +1184,7 @@ body {
   }
   .contact__heading {
     font-size: 35px;
+    margin-bottom: 12px;
   }
   .contact__lead {
     font-size: 13px;
