@@ -619,7 +619,8 @@ body {
     justify-content: space-between;
 
     .works__item {
-      flex: 1;
+      flex: none;
+      width: calc(50% - 5px);
     }
   }
 
@@ -1153,7 +1154,7 @@ body {
   }
 
   .about__lead {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .about__text {
@@ -1355,6 +1356,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .contact__heading {

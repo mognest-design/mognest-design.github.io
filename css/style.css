@@ -552,7 +552,8 @@ body {
     justify-content: space-between;
   }
   .works__item-group .works__item {
-    flex: 1;
+    flex: none;
+    width: calc(50% - 5px);
   }
   .works__more {
     margin-top: 0;
@@ -1012,7 +1013,7 @@ body {
     letter-spacing: 0.15em;
   }
   .about__lead {
-    font-size: 11px;
+    font-size: 12px;
   }
   .about__text {
     font-size: 12px;
@@ -1181,6 +1182,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 60px;
+    padding-bottom: 60px;
   }
   .contact__heading {
     font-size: 35px;
