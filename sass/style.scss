@@ -156,7 +156,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .header__nav {
     display: none;
 
@@ -289,7 +289,7 @@ body {
   100% { opacity: 0; }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .hero {
     &__content {
       bottom: 40px;
@@ -353,7 +353,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .intro {
     padding: 24px 10px;
   }
@@ -567,7 +567,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .works {
     padding-top: 45px;
     padding-left: 10px;
@@ -842,7 +842,7 @@ body {
   display: contents;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .work-detail {
     display: flex;
     flex-direction: column;
@@ -902,7 +902,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     order: 1;
     margin-bottom: 12px;
   }
@@ -1047,13 +1047,13 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .works-catalog__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .works-catalog {
     padding-top: 90px;
     padding-left: 10px;
@@ -1217,7 +1217,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .about {
     padding-left: 10px;
     padding-right: 10px;
@@ -1436,7 +1436,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .contact {
     padding-left: 10px;
     padding-right: 10px;
@@ -1533,7 +1533,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .not-found {
     padding: 110px 24px 80px;
 
@@ -1609,7 +1609,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .legal {
     padding: 110px 24px 80px;
 
@@ -1674,7 +1674,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .footer {
     padding-left: 10px;
     padding-right: 10px;
