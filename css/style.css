@@ -736,6 +736,13 @@ body {
   justify-content: center;
   gap: 16px;
 }
+.work-detail-extra__nav--top {
+  display: none;
+}
+
+.work-detail__top-row {
+  display: contents;
+}
 
 @media (max-width: 767px) {
   .work-detail {
@@ -747,10 +754,6 @@ body {
   }
   .work-detail__sidebar {
     display: contents;
-  }
-  .work-detail__back {
-    order: 1;
-    margin-bottom: 12px;
   }
   .work-detail__back-icon {
     width: 32px;
@@ -784,6 +787,21 @@ body {
   .work-detail__back-icon svg, .work-detail__nav-arrow svg {
     width: 11px;
     height: 8px;
+  }
+  .work-detail__top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    order: 1;
+    margin-bottom: 12px;
+  }
+  .work-detail-extra__nav {
+    display: none;
+  }
+  .work-detail-extra__nav--top {
+    display: flex;
+    gap: 8px;
   }
   .work-detail-extra {
     padding: 0 10px 60px;

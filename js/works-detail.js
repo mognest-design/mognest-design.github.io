@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevWork = currentIndex > 0 ? worksData[currentIndex - 1] : null;
   const nextWork = currentIndex < worksData.length - 1 ? worksData[currentIndex + 1] : null;
 
-  const prevArrow = document.querySelector('.work-detail__nav-arrow--prev');
-  const nextArrow = document.querySelector('.work-detail__nav-arrow--next');
+  const prevArrows = document.querySelectorAll('.work-detail__nav-arrow--prev');
+  const nextArrows = document.querySelectorAll('.work-detail__nav-arrow--next');
 
-  if (prevArrow) {
+  prevArrows.forEach((prevArrow) => {
     if (prevWork) {
       prevArrow.href = getDetailUrl(prevWork);
       prevArrow.classList.remove('work-detail__nav-arrow--disabled');
@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
       prevArrow.removeAttribute('href');
       prevArrow.classList.add('work-detail__nav-arrow--disabled');
     }
-  }
+  });
 
-  if (nextArrow) {
+  nextArrows.forEach((nextArrow) => {
     if (nextWork) {
       nextArrow.href = getDetailUrl(nextWork);
       nextArrow.classList.remove('work-detail__nav-arrow--disabled');
@@ -71,5 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
       nextArrow.removeAttribute('href');
       nextArrow.classList.add('work-detail__nav-arrow--disabled');
     }
-  }
+  });
 });

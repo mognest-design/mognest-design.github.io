@@ -831,7 +831,15 @@ body {
     display: flex;
     justify-content: center;
     gap: 16px;
+
+    &--top {
+      display: none;
+    }
   }
+}
+
+.work-detail__top-row {
+  display: contents;
 }
 
 @media (max-width: 767px) {
@@ -844,11 +852,6 @@ body {
 
     &__sidebar {
       display: contents;
-    }
-
-    &__back {
-      order: 1;
-      margin-bottom: 12px;
     }
 
     &__back-icon {
@@ -892,6 +895,24 @@ body {
     &__nav-arrow svg {
       width: 11px;
       height: 8px;
+    }
+  }
+
+  .work-detail__top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    order: 1;
+    margin-bottom: 12px;
+  }
+
+  .work-detail-extra__nav {
+    display: none;
+
+    &--top {
+      display: flex;
+      gap: 8px;
     }
   }
 

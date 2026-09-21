@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css?v=10" />
+    <link rel="stylesheet" href="css/style.css?v=11" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -192,27 +192,74 @@
       <main class="main">
         <section class="work-detail">
           <div class="work-detail__sidebar">
-            <a href="works.html" class="work-detail__back">
-              <span class="work-detail__back-icon">
-                <svg
-                  width="20"
-                  height="14"
-                  viewBox="0 0 20 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div class="work-detail__top-row">
+              <a href="works.html" class="work-detail__back">
+                <span class="work-detail__back-icon">
+                  <svg
+                    width="20"
+                    height="14"
+                    viewBox="0 0 20 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 7H19M19 7L13 1M19 7L13 13"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      transform="rotate(180 10 7)"
+                    />
+                  </svg>
+                </span>
+                <span class="work-detail__back-text">view all</span>
+              </a>
+
+              <div class="work-detail-extra__nav work-detail-extra__nav--top">
+                <a
+                  href="#"
+                  class="work-detail__nav-arrow work-detail__nav-arrow--prev"
+                  aria-label="前の作品へ"
                 >
-                  <path
-                    d="M0 7H19M19 7L13 1M19 7L13 13"
-                    stroke="currentColor"
-                    stroke-width="1.2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    transform="rotate(180 10 7)"
-                  />
-                </svg>
-              </span>
-              <span class="work-detail__back-text">view all</span>
-            </a>
+                  <svg
+                    width="20"
+                    height="14"
+                    viewBox="0 0 20 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 7H19M19 7L13 1M19 7L13 13"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="work-detail__nav-arrow work-detail__nav-arrow--next"
+                  aria-label="次の作品へ"
+                >
+                  <svg
+                    width="20"
+                    height="14"
+                    viewBox="0 0 20 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 7H19M19 7L13 1M19 7L13 13"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
             <h1 class="work-detail__title" id="detailTitle"></h1>
             <p class="work-detail__tags" id="detailTags"></p>
