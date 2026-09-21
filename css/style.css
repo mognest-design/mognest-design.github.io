@@ -319,6 +319,7 @@ body {
   .intro__text {
     font-size: 12px;
     line-height: 1.9;
+    letter-spacing: -0.03em;
   }
 }
 /* ==========================================================================
@@ -513,18 +514,19 @@ body {
   }
   .works__heading {
     font-size: 35px;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
   }
   .works__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   .works__item--wide {
-    grid-column: span 2;
+    grid-column: span 1;
   }
   .works__label {
     font-size: 12px;
+    padding: 8px 0 10px;
   }
   .works__thumb {
     height: auto;
@@ -541,6 +543,9 @@ body {
   .works__img--large {
     width: 80%;
     height: 80%;
+  }
+  .works__more {
+    margin-top: 20px;
   }
   .works__more-text {
     font-size: 13px;
@@ -997,6 +1002,13 @@ body {
   .about__text {
     font-size: 12px;
   }
+  .about__subtitle {
+    font-size: 27px;
+  }
+  .about__service-badge {
+    font-size: 10px;
+    padding: 5px 16px;
+  }
 }
 /* ==========================================================================
    Contact
@@ -1153,12 +1165,14 @@ body {
   .contact {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 60px;
   }
   .contact__heading {
     font-size: 35px;
   }
   .contact__lead {
     font-size: 13px;
+    letter-spacing: -0.03em;
   }
 }
 /* ==========================================================================
