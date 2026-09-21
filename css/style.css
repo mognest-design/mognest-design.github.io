@@ -471,6 +471,41 @@ body {
     transform: translateY(0);
   }
 }
+@media (max-width: 767px) {
+  .works {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .works__heading {
+    font-size: 35px;
+  }
+  .works__list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .works__item--wide {
+    grid-column: span 1;
+  }
+  .works__thumb {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .works__thumb--dark {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .works__img {
+    width: 80%;
+    height: 80%;
+  }
+  .works__img--large {
+    width: 80%;
+    height: 80%;
+  }
+  .works__more-text {
+    font-size: 13px;
+  }
+}
 /* ==========================================================================
    Works Detail(個別詳細ページ)
    ========================================================================== */
@@ -905,6 +940,25 @@ body {
   margin-bottom: 10px;
 }
 
+@media (max-width: 767px) {
+  .about {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about__heading {
+    font-size: 35px;
+  }
+  .about__name {
+    font-size: 22px;
+  }
+  .about__lead {
+    font-size: 13px;
+  }
+  .about__text {
+    font-size: 12px;
+  }
+}
+
 /* ==========================================================================
    Contact
    +========================================================================== */
@@ -1056,6 +1110,16 @@ body {
 }
 .contact--closed .contact__submit-icon {
   color: var(--color-gray02);
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .contact__heading {
+    font-size: 35px;
+  }
 }
 
 /* ==========================================================================
@@ -1246,4 +1310,10 @@ body {
 .footer__link:hover {
   color: var(--color-gray03);
   transform: translate(1px, 1px);
-}/*# sourceMappingURL=style.css.map */
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
