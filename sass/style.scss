@@ -1767,9 +1767,9 @@ body {
     font-size: clamp(14px, 4.2vw, 22px);
   }
 
-  // トップページ: リード文はスクロールしないと見えない位置になる(hero高さ変更の結果)。文字サイズを今の80%に
+  // トップページ: リード文はスクロールしないと見えない位置になる(hero高さ変更の結果)
   .intro__text {
-    font-size: 7px;
+    font-size: 8px;
     line-height: 1.7;
   }
 
@@ -1792,9 +1792,9 @@ body {
     padding: 3px 10px;
   }
 
-  // トップページ: Contactのラベルをcontact__leadと同じ大きさに
+  // トップページ: Contactのラベル
   .contact__label {
-    font-size: 15px;
+    font-size: 8px;
   }
 
   .contact__submit-text {
@@ -1807,12 +1807,12 @@ body {
   }
 
   .works-catalog {
-    padding-top: 56px;
+    padding-top: 21px;
   }
 
   .works-catalog__heading {
     padding-bottom: 0;
-    margin-bottom: 35px;
+    margin-bottom: 18px;
   }
 
   // 作品詳細ページ: PCレイアウトのまま、画像を画面幅の半分に。ヘッダーとの隙間を1/4に。view all・矢印はTOPページのview moreと同じ大きさに
@@ -1831,13 +1831,13 @@ body {
   }
 
   .work-detail__back-text {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .work-detail__back-icon,
   .work-detail__nav-arrow {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
 
   // 作品詳細ページ: 画像左の説明文を作品一覧のタイトル・文字と同じ大きさに
@@ -1855,7 +1855,7 @@ body {
 
   .work-detail__back-icon svg,
   .work-detail__nav-arrow svg {
-    width: 14px;
-    height: 10px;
+    width: 9px;
+    height: 6px;
   }
 }

@@ -1529,7 +1529,7 @@ body {
     font-size: clamp(14px, 4.2vw, 22px);
   }
   .intro__text {
-    font-size: 7px;
+    font-size: 8px;
     line-height: 1.7;
   }
   .works__list {
@@ -1546,7 +1546,7 @@ body {
     padding: 3px 10px;
   }
   .contact__label {
-    font-size: 15px;
+    font-size: 8px;
   }
   .contact__submit-text {
     font-size: 13px;
@@ -1555,11 +1555,11 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
   .works-catalog {
-    padding-top: 56px;
+    padding-top: 21px;
   }
   .works-catalog__heading {
     padding-bottom: 0;
-    margin-bottom: 35px;
+    margin-bottom: 18px;
   }
   .work-detail {
     padding: 22px 20px 40px;
@@ -1573,12 +1573,12 @@ body {
     width: 50%;
   }
   .work-detail__back-text {
-    font-size: 16px;
+    font-size: 10px;
   }
   .work-detail__back-icon,
   .work-detail__nav-arrow {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
   .work-detail__title {
     font-size: 15px;
@@ -1591,7 +1591,7 @@ body {
   }
   .work-detail__back-icon svg,
   .work-detail__nav-arrow svg {
-    width: 14px;
-    height: 10px;
+    width: 9px;
+    height: 6px;
   }
 }
