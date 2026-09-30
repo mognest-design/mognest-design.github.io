@@ -1529,7 +1529,8 @@ body {
     font-size: clamp(14px, 4.2vw, 22px);
   }
   .intro__text {
-    font-size: 12px;
+    font-size: 9px;
+    line-height: 1.7;
   }
   .works__list {
     grid-template-columns: repeat(3, 1fr);
@@ -1537,11 +1538,15 @@ body {
   .works__item--wide {
     grid-column: span 1;
   }
+  .about__text {
+    font-size: 9px;
+  }
   .about__service-badge {
-    font-size: 12px;
+    font-size: 9px;
+    padding: 4px 12px;
   }
   .contact__label {
-    font-size: 15px;
+    font-size: 10px;
   }
   .contact__submit-text {
     font-size: 13px;
