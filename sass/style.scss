@@ -191,21 +191,10 @@ body {
   }
 
   .header__nav-link {
-    position: relative;
+    transition: opacity 0.2s ease;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 1px;
-      background-color: currentColor;
-      transition: width 0.3s ease;
-    }
-
-    &:hover::after {
-      width: 100%;
+    &:active {
+      opacity: 0.5;
     }
   }
 
