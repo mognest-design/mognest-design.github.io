@@ -288,7 +288,7 @@ body {
     margin-left: 0;
   }
   .hero__copy-line--indent {
-    margin-left: 12px;
+    margin-left: 0;
   }
 }
 @media (min-width: 1024px) {
@@ -1529,7 +1529,7 @@ body {
     font-size: clamp(14px, 4.2vw, 22px);
   }
   .intro__text {
-    font-size: 6px;
+    font-size: 12px;
   }
   .works__list {
     grid-template-columns: repeat(3, 1fr);
@@ -1548,5 +1548,29 @@ body {
   }
   .works-catalog__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .work-detail {
+    padding: 90px 20px 40px;
+    gap: 20px;
+  }
+  .work-detail__sidebar {
+    flex: 1;
+  }
+  .work-detail__gallery {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  .work-detail__back-text {
+    font-size: 16px;
+  }
+  .work-detail__back-icon,
+  .work-detail__nav-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .work-detail__back-icon svg,
+  .work-detail__nav-arrow svg {
+    width: 14px;
+    height: 10px;
   }
 }

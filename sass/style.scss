@@ -322,7 +322,7 @@ body {
       margin-left: 0;
 
       &--indent {
-        margin-left: 12px;
+        margin-left: 0;
       }
     }
   }
@@ -1767,9 +1767,9 @@ body {
     font-size: clamp(14px, 4.2vw, 22px);
   }
 
-  // トップページ: リード文はスクロールしないと見えない位置になる(hero高さ変更の結果)。文字サイズも半分に
+  // トップページ: リード文はスクロールしないと見えない位置になる(hero高さ変更の結果)。文字サイズはabout__leadと同じに
   .intro__text {
-    font-size: 6px;
+    font-size: 12px;
   }
 
   // トップページ: Worksを3列に
@@ -1798,5 +1798,36 @@ body {
   // Works一覧ページ: 3列に
   .works-catalog__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  // 作品詳細ページ: PCレイアウトのまま、画像を画面幅の半分に。view all・矢印はTOPページのview moreと同じ大きさに
+  .work-detail {
+    padding: 90px 20px 40px;
+    gap: 20px;
+  }
+
+  .work-detail__sidebar {
+    flex: 1;
+  }
+
+  .work-detail__gallery {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .work-detail__back-text {
+    font-size: 16px;
+  }
+
+  .work-detail__back-icon,
+  .work-detail__nav-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .work-detail__back-icon svg,
+  .work-detail__nav-arrow svg {
+    width: 14px;
+    height: 10px;
   }
 }
