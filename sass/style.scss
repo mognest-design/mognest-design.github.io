@@ -1767,9 +1767,9 @@ body {
     font-size: clamp(14px, 4.2vw, 22px);
   }
 
-  // トップページ: リード文はスクロールしないと見えない位置になる(hero高さ変更の結果)。文字サイズをさらに縮小
+  // トップページ: リード文はスクロールしないと見えない位置になる(hero高さ変更の結果)。文字サイズを今の80%に
   .intro__text {
-    font-size: 9px;
+    font-size: 7px;
     line-height: 1.7;
   }
 
@@ -1782,33 +1782,42 @@ body {
     grid-column: span 1;
   }
 
-  // トップページ: About(Skill/Serviceの本文・バッジ)の文字をさらに縮小
+  // トップページ: About(Skill/Serviceの本文・バッジ)の文字を今の80%に
   .about__text {
-    font-size: 9px;
+    font-size: 7px;
   }
 
   .about__service-badge {
-    font-size: 9px;
-    padding: 4px 12px;
+    font-size: 7px;
+    padding: 3px 10px;
   }
 
-  // トップページ: Contactのラベルをさらに縮小
+  // トップページ: Contactのラベルをcontact__leadと同じ大きさに
   .contact__label {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .contact__submit-text {
     font-size: 13px;
   }
 
-  // Works一覧ページ: 3列に
+  // Works一覧ページ: 3列に。ヘッダーとの隙間・画像との隙間を詰める
   .works-catalog__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  // 作品詳細ページ: PCレイアウトのまま、画像を画面幅の半分に。view all・矢印はTOPページのview moreと同じ大きさに
+  .works-catalog {
+    padding-top: 56px;
+  }
+
+  .works-catalog__heading {
+    padding-bottom: 0;
+    margin-bottom: 35px;
+  }
+
+  // 作品詳細ページ: PCレイアウトのまま、画像を画面幅の半分に。ヘッダーとの隙間を1/4に。view all・矢印はTOPページのview moreと同じ大きさに
   .work-detail {
-    padding: 90px 20px 40px;
+    padding: 22px 20px 40px;
     gap: 20px;
   }
 
@@ -1829,6 +1838,19 @@ body {
   .work-detail__nav-arrow {
     width: 40px;
     height: 40px;
+  }
+
+  // 作品詳細ページ: 画像左の説明文を作品一覧のタイトル・文字と同じ大きさに
+  .work-detail__title {
+    font-size: 15px;
+  }
+
+  .work-detail__tags {
+    font-size: 13px;
+  }
+
+  .work-detail__meta-text {
+    font-size: 13px;
   }
 
   .work-detail__back-icon svg,
