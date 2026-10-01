@@ -1560,6 +1560,7 @@ body {
   }
   .work-detail__sidebar {
     flex: 1;
+    justify-content: flex-start;
   }
   .work-detail__gallery {
     flex: 0 0 50%;
