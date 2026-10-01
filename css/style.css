@@ -636,6 +636,15 @@ body {
   letter-spacing: 0em;
   margin: 0 0 20px;
 }
+.work-detail__tag-item {
+  display: inline;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+.work-detail__tag-sep {
+  display: inline;
+}
 .work-detail__meta-row {
   display: flex;
   gap: 0px;
@@ -1555,16 +1564,22 @@ body {
     margin-bottom: 18px;
   }
   .work-detail {
-    padding: 22px 20px 40px;
+    height: calc(100vh - clamp(40px, 5vw, 70px) - 78px);
+    padding: 58px 20px 20px;
     gap: 20px;
+    box-sizing: content-box;
   }
   .work-detail__sidebar {
     flex: 1;
     justify-content: flex-start;
+    min-height: 0;
+    overflow-y: auto;
   }
   .work-detail__gallery {
-    flex: 0 0 50%;
-    width: 50%;
+    flex: 0 0 auto;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1/1;
   }
   .work-detail__back-text {
     font-size: 10px;
@@ -1576,12 +1591,28 @@ body {
   }
   .work-detail__title {
     font-size: 15px;
+    margin-top: auto;
   }
   .work-detail__tags {
     font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .work-detail__tag-sep {
+    display: none;
+  }
+  .work-detail__tag-item {
+    display: inline-block;
+    border: 1px solid var(--color-black);
+    padding: 2px 8px;
+    font-size: 10px;
   }
   .work-detail__meta-text {
     font-size: 13px;
+  }
+  #detailDescription {
+    line-height: 0.9;
   }
   .work-detail__back-icon svg,
   .work-detail__nav-arrow svg {

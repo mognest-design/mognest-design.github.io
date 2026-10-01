@@ -718,6 +718,18 @@ body {
     margin: 0 0 20px;
   }
 
+  // タグ項目(通常時はスラッシュ区切りの地のテキストのまま見せる。横画面のみ四角枠に変える)
+  &__tag-item {
+    display: inline;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  &__tag-sep {
+    display: inline;
+  }
+
   &__meta-row {
     display: flex;
     gap: 0px;
@@ -1809,19 +1821,27 @@ body {
   }
 
   // 作品詳細ページ: PCレイアウトのまま、画像を画面幅の半分に。ヘッダーとの隙間を1/4に。view all・矢印はTOPページのview moreと同じ大きさに
+  // ヘッダー(固定)の高さ分だけ上に余白を確保しつつ、画面の縦幅にきっちり収まる高さを明示する
   .work-detail {
-    padding: 22px 20px 40px;
+    height: calc(100vh - clamp(40px, 5vw, 70px) - 78px);
+    padding: 58px 20px 20px;
     gap: 20px;
+    box-sizing: content-box;
   }
 
   .work-detail__sidebar {
     flex: 1;
     justify-content: flex-start;
+    min-height: 0;
+    overflow-y: auto;
   }
 
+  // 画像が画面縦幅に収まりきらず見切れるのを防ぐため、横幅基準ではなく縦幅基準の正方形にする
   .work-detail__gallery {
-    flex: 0 0 50%;
-    width: 50%;
+    flex: 0 0 auto;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
   }
 
   .work-detail__back-text {
@@ -1835,16 +1855,38 @@ body {
   }
 
   // 作品詳細ページ: 画像左の説明文を作品一覧のタイトル・文字と同じ大きさに
+  // タイトル以下のブロックは画像と下ぞろえ(矢印の行だけ画像と上ぞろえにするため、ここで余白を自動で詰める)
   .work-detail__title {
     font-size: 15px;
+    margin-top: auto;
   }
 
   .work-detail__tags {
     font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  // タグ項目をそれぞれ四角い黒枠のボックスに(スラッシュ区切りの代わり)
+  .work-detail__tag-sep {
+    display: none;
+  }
+
+  .work-detail__tag-item {
+    display: inline-block;
+    border: 1px solid var(--color-black);
+    padding: 2px 8px;
+    font-size: 10px;
   }
 
   .work-detail__meta-text {
     font-size: 13px;
+  }
+
+  // Conceptの説明文のみ行間を半分に
+  #detailDescription {
+    line-height: 0.9;
   }
 
   .work-detail__back-icon svg,

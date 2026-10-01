@@ -20,7 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const imgWrap = document.getElementById('detailImageWrap');
   const subImagesEl = document.getElementById('detailSubImages');
 
-  if (tagsEl) tagsEl.textContent = work.tags;
+  if (tagsEl && work.tags) {
+    const tagParts = String(work.tags)
+      .split('｜')
+      .map((t) => t.trim())
+      .filter((t) => t.length > 0);
+    tagsEl.innerHTML = tagParts
+      .map((t) => `<span class="work-detail__tag-item">${t}</span>`)
+      .join('<span class="work-detail__tag-sep">｜</span>');
+  } else if (tagsEl) {
+    tagsEl.textContent = '';
+  }
   if (titleEl) titleEl.textContent = work.title;
   if (categoryEl) categoryEl.textContent = work.category;
   if (descriptionEl) descriptionEl.textContent = work.description || '';
