@@ -811,9 +811,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     order: 1;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+  }
+  .work-detail__back {
+    margin-bottom: 0;
   }
   .work-detail-extra__nav {
     display: none;
@@ -1583,5 +1586,21 @@ body {
   .work-detail__nav-arrow svg {
     width: 9px;
     height: 6px;
+  }
+  .work-detail__top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .work-detail__back {
+    margin-bottom: 0;
+  }
+  .work-detail-extra__nav {
+    display: none;
+  }
+  .work-detail-extra__nav--top {
+    display: flex;
+    gap: 8px;
   }
 }
