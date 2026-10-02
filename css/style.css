@@ -627,7 +627,7 @@ body {
   font-family: var(--font-mincho);
   font-size: 26px;
   font-weight: 500;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 .work-detail__tags {
   font-family: var(--font-tag);
@@ -641,9 +641,9 @@ body {
 }
 .work-detail__tag-item {
   display: inline-block;
-  border: 1px solid var(--color-gray03);
-  padding: 2px 8px;
-  font-size: 12px;
+  border: 1px solid #B8C0C3;
+  padding: 1px 5px;
+  font-size: 9.6px;
 }
 .work-detail__tag-sep {
   display: none;
